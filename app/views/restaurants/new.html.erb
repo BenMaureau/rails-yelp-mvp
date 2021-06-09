@@ -1,0 +1,25 @@
+<div id = "new_restaurant">
+  <h1> New Restaurant </h1>
+
+  <%= simple_form_for(@restaurant) do |f| %>
+    <div class= 'form-group'>
+      <%= f.label :name, class: "control-label required" %>
+      <%= f.text_field :name, class: "form-control" %>
+    </div>
+    <div class= 'form-group'>
+      <%= f.label :address, class: "control-label required"%>
+      <%= f.text_area :address, class: "form-control" %>
+    </div>
+    <div class= 'form-group'>
+      <%= f.label :phone_number, class: "control-label required"%>
+      <%= f.text_area :phone_number, class: "form-control" %>
+    </div>
+    <div class= 'form-group'>
+      <%= f.label :category, class: "control-label required"%>
+      <%= f.text_area :category, class: "form-control" %>
+    </div>
+    <%= f.submit 'Create restaurant', :class => 'btn btn-success' %>
+
+    <div> <%= link_to "Back to list", restaurants_path, class: 'btn btn-primary' %> </div>
+  <% end %>
+</div>
